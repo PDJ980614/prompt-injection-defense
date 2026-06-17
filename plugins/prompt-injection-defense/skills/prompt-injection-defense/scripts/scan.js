@@ -171,4 +171,9 @@ function main() {
 
 function finish(emitFn, obj) { emitFn(obj); process.exit(0); }
 
-main();
+// 핵심 점수 로직을 Codex 래퍼(bin/codex-guard.js) 등에서 재사용할 수 있게 export.
+// loadConfig()는 이 스킬의 공유 config.json을 읽으므로 ON/OFF·민감도·마스터키가 동일하게 적용된다.
+module.exports = { scoreText, loadConfig, overrideActive, tierFor, RULES, structuralSignals, CONFIG_PATH };
+
+// 훅으로 직접 실행될 때만 스캔을 수행한다(require로 불러올 땐 부수효과 없음).
+if (require.main === module) main();
