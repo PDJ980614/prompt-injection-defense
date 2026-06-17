@@ -127,6 +127,7 @@ function main() {
   try { payload = JSON.parse(raw || '{}'); } catch { payload = {}; }
 
   const cfg = loadConfig();
+  if (cfg.enabled === false) return process.exit(0); // OFF 스위치: 스캔 비활성(훅은 등록돼 있되 즉시 통과)
   const { event, source, host, text } = extract(payload);
   const { score, matched } = scoreText(text);
   const ovr = overrideActive(cfg);

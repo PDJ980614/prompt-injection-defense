@@ -1,4 +1,5 @@
 {
+  "enabled": true,
   "sensitivity": "medium",
   "trustedDomains": [],
   "overrideEnabled": false,
