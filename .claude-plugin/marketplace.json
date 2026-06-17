@@ -1,0 +1,11 @@
+{
+  "name": "prompt-injection-defense",
+  "owner": { "name": "PDJ980614" },
+  "plugins": [
+    {
+      "name": "prompt-injection-defense",
+      "source": "./plugins/prompt-injection-defense",
+      "description": "외부·미신뢰 콘텐츠의 프롬프트 인젝션을 1차 훅 스캐너로 탐지·차단하는 방어 플러그인"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "prompt-injection-defense",
+  "version": "0.1.0",
+  "description": "프롬프트 인젝션 방어 — UserPromptSubmit/PostToolUse 훅으로 외부 콘텐츠를 결정론적 스캔해 위험 등급(상=차단/중=2차검증/하=로그)을 매긴다",
+  "author": { "name": "PDJ980614" }
+}

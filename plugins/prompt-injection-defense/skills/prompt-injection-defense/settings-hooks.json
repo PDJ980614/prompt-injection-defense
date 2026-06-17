@@ -1,0 +1,26 @@
+{
+  "_comment": "이 hooks 블록을 ~/.claude/settings.json 에 병합하면 1차 스캐너가 활성화됩니다. 경로는 본인 환경에 맞게 확인하세요.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:/Users/djpark26/.claude/skills/prompt-injection-defense/scripts/scan.js\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "WebFetch|WebSearch|Read|Fetch|mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:/Users/djpark26/.claude/skills/prompt-injection-defense/scripts/scan.js\""
+          }
+        ]
+      }
+    ]
+  }
+}
